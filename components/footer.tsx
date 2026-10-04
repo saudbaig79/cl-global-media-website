@@ -52,7 +52,10 @@ export function Footer() {
             <p className="text-white/50 text-sm leading-relaxed mb-3">
               CL GLOBAL MEDIA LLC provides planning and coordination capabilities across outdoor and place-based advertising formats.
             </p>
-            <p className="text-white/70 text-xs uppercase tracking-wider">Legal name: CL GLOBAL MEDIA LLC</p>
+            <div className="space-y-1 text-white/70 text-xs uppercase tracking-wider">
+              <p>Legal name: CL GLOBAL MEDIA LLC</p>
+              <p>Company No: 7521073</p>
+            </div>
 
           </div>
 
