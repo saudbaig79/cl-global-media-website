@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { AnimatedSection } from "@/components/ui/animated-section"
 
-const ceo = { name: "Tristan Marsh", role: "Chief Executive Officer", bio: "Leads CL GLOBAL MEDIA LLC and is responsible for company direction, client engagement, and the coordination of its media and advertising services.", initials: "TM" }
+const ceo = { name: "Tristan Marsh", role: "General Manager", bio: "Leads CL GLOBAL MEDIA LLC and is responsible for company direction, client engagement, and the coordination of its media and advertising services.", initials: "TM" }
 const leadershipTeam = [
   { name: "Michael Matthews", role: "Head of Personnel", bio: "Responsible for personnel planning, team coordination, and supporting the company's working culture.", initials: "MM" },
   { name: "Miles Parker", role: "Head of Sales", bio: "Responsible for sales activity, prospective client communication, and the commercial development of advertising opportunities.", initials: "MP" },
