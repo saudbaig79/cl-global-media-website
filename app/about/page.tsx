@@ -51,8 +51,8 @@ export default function AboutPage() {
                 <div><dt className="text-sm text-background/60">Markets served</dt><dd className="mt-1">United States and United Kingdom</dd></div>
                 <div className="flex gap-3"><Phone aria-hidden="true" size={20} /><div><dt className="sr-only">Phone</dt><dd><a href="tel:+15852150461">+1 (585) 215-0461</a></dd></div></div>
                 <div className="flex gap-3"><Mail aria-hidden="true" size={20} /><div><dt className="sr-only">Email</dt><dd><a href="mailto:enquiries@clglobalmedia.com">enquiries@clglobalmedia.com</a></dd></div></div>
-                <div className="flex gap-3"><MapPin aria-hidden="true" size={20} /><div><dt className="text-sm text-background/60">Mailing address (correspondence only)</dt><dd>CL GLOBAL MEDIA LLC, 99 Wall Street, New York, NY 10005, USA</dd></div></div>
-                <div className="flex gap-3"><MapPin aria-hidden="true" size={20} /><div><dt className="text-sm text-background/60">Operating address</dt><dd>1875 Mission Street, Suites 103-106, San Francisco, CA 94103, USA</dd></div></div>
+                <div className="flex gap-3"><MapPin aria-hidden="true" size={20} /><div><dt className="text-sm text-background/60">Mailing address (correspondence only):</dt><dd>99 Wall Street, New York, NY 10005, USA</dd></div></div>
+                <div className="flex gap-3"><MapPin aria-hidden="true" size={20} /><div><dt className="text-sm text-background/60">Operating address:</dt><dd>1875 Mission Street, Suites 103-106, San Francisco, CA 94103, USA</dd></div></div>
               </dl>
               <p className="mt-6 text-sm leading-relaxed text-background/60">Our team works remotely and meets clients by appointment only. CL Global Media is a brand used under licence.</p>
             </div>

@@ -91,11 +91,11 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin aria-hidden="true" size={18} className="mt-0.5 shrink-0 text-[#d4af37]" />
-                <span><strong className="block text-white">Mailing address (correspondence only)</strong>CL GLOBAL MEDIA LLC<br />99 Wall Street<br />New York, NY 10005<br />USA</span>
+                <span><strong className="block text-white">Mailing address (correspondence only):</strong>99 Wall Street, New York, NY 10005, USA</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin aria-hidden="true" size={18} className="mt-0.5 shrink-0 text-[#d4af37]" />
-                <span><strong className="block text-white">Operating address</strong>1875 Mission Street, Suites 103-106<br />San Francisco, CA 94103<br />USA</span>
+                <span><strong className="block text-white">Operating address:</strong>1875 Mission Street, Suites 103-106, San Francisco, CA 94103, USA</span>
               </li>
             </ul>
             <p className="mt-4 text-xs leading-relaxed text-white/50">Our team works remotely and meets clients by appointment only.</p>

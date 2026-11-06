@@ -27,7 +27,7 @@ export default function TermsOfUsePage() {
         <div className="mx-auto max-w-4xl">
           <AnimatedSection animation="fade-up">
             <h1 className="text-4xl font-semibold text-foreground md:text-5xl">Website Terms of Use</h1>
-            <p className="mt-4 text-sm text-muted-foreground">Version 1.1, last updated [DATE]</p>
+            <p className="mt-4 text-sm text-muted-foreground">Version 1.1, last updated November 2026</p>
             <div className="mt-10 flex flex-col gap-8 text-base leading-relaxed text-muted-foreground">
               {sections.map((section) => (
                 <section key={section.title}>
