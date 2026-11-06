@@ -16,7 +16,7 @@ export default function CookiePolicy() {
         <div className="mx-auto max-w-4xl">
           <AnimatedSection animation="fade-up">
             <h1 className="text-4xl font-semibold text-foreground md:text-5xl">Cookie Policy</h1>
-            <p className="mt-4 text-sm text-muted-foreground">Last updated: [DATE OF PUBLICATION]</p>
+            <p className="mt-4 text-sm text-muted-foreground">Last updated: November 2026</p>
             <div className="mt-10 flex flex-col gap-8 text-base leading-relaxed text-muted-foreground">
               <section>
                 <h2 className="mb-3 text-2xl font-semibold text-primary">Cookies and similar technologies</h2>

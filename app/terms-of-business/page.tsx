@@ -32,7 +32,7 @@ const termsSections = [
   {
     title: "4. Proposals and orders",
     paragraphs: [
-      "4.1 A Proposal is valid for [14] days. A contract is formed when you accept a Proposal in writing.",
+      "4.1 A Proposal is valid for 14 days. A contract is formed when you accept a Proposal in writing.",
       "4.2 Changes to an accepted Campaign must be agreed in writing and may change the Fees and Media Costs.",
     ],
   },
@@ -47,10 +47,10 @@ const termsSections = [
   {
     title: "6. Fees and payment",
     paragraphs: [
-      "6.1 Fees and Media Costs are stated in the Proposal in [USD / GBP / EUR] and are exclusive of any applicable taxes.",
-      "6.2 Unless the Proposal states otherwise, Media Costs are payable in full [before the booking is confirmed] and Fees are payable within [30] days of invoice.",
+      "6.1 Fees and Media Costs are stated in the Proposal in USD and are exclusive of any applicable taxes.",
+      "6.2 Unless the Proposal states otherwise, Media Costs are payable in full before the booking is confirmed and Fees are payable within 30 days of invoice.",
       "6.3 Payment must be made by bank transfer from an account in your own business name to the account shown on our invoice. We do not accept cash or third-party payments.",
-      "6.4 We may charge interest on overdue sums at [RATE]% per year above [REFERENCE RATE] and suspend services until payment is made.",
+      "6.4 We may charge interest on overdue sums at 1.5% per month, or the maximum rate permitted by applicable law, whichever is lower, and suspend services until payment is made.",
     ],
   },
   {
@@ -91,7 +91,7 @@ const termsSections = [
   {
     title: "12. Termination",
     paragraphs: [
-      "12.1 Either party may terminate on written notice if the other commits a material breach not remedied within [14] days of notice, or becomes insolvent.",
+      "12.1 Either party may terminate on written notice if the other commits a material breach not remedied within 14 days of notice, or becomes insolvent.",
     ],
   },
   {
@@ -136,7 +136,7 @@ export default function TermsOfBusinessPage() {
                   <p>Mailing address (correspondence only): 99 Wall Street, New York, NY 10005, USA.</p>
                   <p>Operating address: 1875 Mission Street, Suites 103-106, San Francisco, CA 94103, USA.</p>
                   <p><a className="text-foreground underline decoration-primary underline-offset-4" href="mailto:enquiries@clglobalmedia.com">enquiries@clglobalmedia.com</a></p>
-                  <p>Last updated: [DATE OF PUBLICATION].</p>
+                  <p>Last updated: November 2026.</p>
                 </div>
               </section>
             </div>

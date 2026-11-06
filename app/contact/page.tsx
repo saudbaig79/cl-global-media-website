@@ -41,8 +41,8 @@ export default function ContactPage() {
             <div className="mt-10 flex flex-col gap-7">
               <a href="tel:+15852150461" className="flex items-start gap-4 text-muted-foreground transition-colors hover:text-foreground"><Phone className="mt-1 shrink-0 text-primary" aria-hidden="true" /><span><strong className="block text-foreground">Phone</strong>+1 (585) 215-0461</span></a>
               <a href="mailto:enquiries@clglobalmedia.com" className="flex items-start gap-4 break-all text-muted-foreground transition-colors hover:text-foreground"><Mail className="mt-1 shrink-0 text-primary" aria-hidden="true" /><span><strong className="block text-foreground">Email</strong>enquiries@clglobalmedia.com</span></a>
-              <div className="flex items-start gap-4 text-muted-foreground"><MapPin className="mt-1 shrink-0 text-primary" aria-hidden="true" /><span><strong className="block text-foreground">Mailing address (correspondence only)</strong>CL GLOBAL MEDIA LLC<br />99 Wall Street<br />New York, NY 10005<br />USA</span></div>
-              <div className="flex items-start gap-4 text-muted-foreground"><MapPin className="mt-1 shrink-0 text-primary" aria-hidden="true" /><span><strong className="block text-foreground">Operating address</strong>1875 Mission Street, Suites 103-106<br />San Francisco, CA 94103<br />USA</span></div>
+              <div className="flex items-start gap-4 text-muted-foreground"><MapPin className="mt-1 shrink-0 text-primary" aria-hidden="true" /><span><strong className="block text-foreground">Mailing address (correspondence only):</strong>99 Wall Street, New York, NY 10005, USA</span></div>
+              <div className="flex items-start gap-4 text-muted-foreground"><MapPin className="mt-1 shrink-0 text-primary" aria-hidden="true" /><span><strong className="block text-foreground">Operating address:</strong>1875 Mission Street, Suites 103-106, San Francisco, CA 94103, USA</span></div>
             </div>
             <p className="mt-8 border-l-2 border-primary pl-5 leading-relaxed text-muted-foreground">Our team works remotely and meets clients by appointment only.</p>
           </AnimatedSection>

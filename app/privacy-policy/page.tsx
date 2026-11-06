@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
               </section>
               <section>
                 <h2 className="mb-4 text-2xl font-semibold text-primary">6. Retention</h2>
-                <p>Enquiry data: [24] months from last contact. Client and contract records: [6] years after the end of the contract, or longer if required by law.</p>
+                <p>Enquiry data: 24 months from last contact. Client and contract records: 6 years after the end of the contract, or longer if required by law.</p>
               </section>
               <section>
                 <h2 className="mb-4 text-2xl font-semibold text-primary">7. Your rights</h2>
@@ -52,7 +52,7 @@ export default function PrivacyPolicy() {
               </section>
               <section>
                 <h2 className="mb-4 text-2xl font-semibold text-primary">9. Changes</h2>
-                <p>We will post any changes on this page. Effective date: [DATE OF PUBLICATION].</p>
+                <p>We will post any changes on this page. Effective date: November 2026.</p>
               </section>
               <section className="border border-border bg-card p-6">
                 <h2 className="mb-4 text-xl font-semibold text-foreground">Contact</h2>
