@@ -6,13 +6,14 @@ const quickLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
-  { href: "/team", label: "Meet the Team" },
+  { href: "/team", label: "Leadership" },
   { href: "/contact", label: "Contact" },
 ]
 
 const legalLinks = [
   { href: "/privacy-policy", label: "Privacy Policy" },
-  { href: "/terms-and-conditions", label: "Terms & Conditions" },
+  { href: "/terms-and-conditions", label: "Terms of Use" },
+  { href: "/terms-of-business", label: "Terms of Business" },
   { href: "/cancellation-refund-policy", label: "Cancellation/Refund" },
   { href: "/cookie-policy", label: "Cookie Policy" },
   { href: "/disclaimer", label: "Legal Disclaimer" },
@@ -21,135 +22,107 @@ const legalLinks = [
 ]
 
 const services = [
-  "Roadside advertising",
+  "Outdoor media planning and buying",
   "Transport advertising",
   "Airport advertising",
   "Retail advertising",
-  "Digital advertising",
+  "Digital out-of-home advertising",
+  "Corporate sponsorship",
 ]
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] border-t border-white/5">
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="relative w-12 h-12">
-                <Image
-                  src="/images/logo.png"
-                  alt="CL Global Media Logo"
-                  fill
-                  className="object-contain"
-                />
+    <footer className="border-t border-white/5 bg-[#0a0a0a]">
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <Link href="/" className="mb-6 flex items-center gap-3">
+              <div className="relative size-12">
+                <Image src="/images/logo.png" alt="CL Global Media logo" fill className="object-contain" />
               </div>
-              <span className="text-xl font-semibold text-white">
-                <span className="text-[#d4af37]">CL</span> Global Media
-              </span>
+              <span className="text-xl font-semibold text-white"><span className="text-[#d4af37]">CL</span> Global Media</span>
             </Link>
-            <p className="text-white/50 text-sm leading-relaxed mb-3">
-              CL GLOBAL MEDIA LLC provides planning and coordination capabilities across outdoor and place-based advertising formats.
+            <p className="mb-4 text-sm leading-relaxed text-white/60">
+              Corporate sponsorship and outdoor media agency planning and buying outdoor, transport, airport, retail, and digital out-of-home advertising for business clients through third-party media owners.
             </p>
-            <div className="space-y-1 text-white/70 text-xs uppercase tracking-wider">
-              <p>Legal name: CL GLOBAL MEDIA LLC</p>
-              <p>Company No: 7521073</p>
+            <div className="flex flex-col gap-2 text-xs leading-relaxed text-white/70">
+              <p>CL GLOBAL MEDIA LLC is a limited liability company organised under the laws of the State of New Mexico, USA.</p>
+              <p>Entity No. 7521073.</p>
+              <p>CL Global Media is a brand used under licence.</p>
             </div>
-
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-white font-semibold mb-6 text-lg">Quick Links</h4>
-            <ul className="space-y-3">
+          <nav aria-label="Quick links">
+            <h2 className="mb-6 text-lg font-semibold text-white">Quick Links</h2>
+            <ul className="flex flex-col gap-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link 
-                    href={link.href} 
-                    className="text-white/50 hover:text-[#d4af37] text-sm transition-colors inline-flex items-center gap-2 group"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]/50 group-hover:bg-[#d4af37] transition-colors" />
-                    {link.label}
+                  <Link href={link.href} className="inline-flex items-center gap-2 text-sm text-white/60 transition-colors hover:text-[#d4af37]">
+                    <span aria-hidden="true" className="size-1.5 rounded-full bg-[#d4af37]/50" />{link.label}
                   </Link>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Services */}
           <div>
-            <h4 className="text-white font-semibold mb-6 text-lg">Our Services</h4>
-            <ul className="space-y-3">
+            <h2 className="mb-6 text-lg font-semibold text-white">Our Services</h2>
+            <ul className="flex flex-col gap-3">
               {services.map((service) => (
-                <li key={service}>
-                  <span className="text-white/50 text-sm inline-flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]/50" />
-                    {service}
-                  </span>
+                <li key={service} className="inline-flex items-start gap-2 text-sm text-white/60">
+                  <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-[#d4af37]/50" />{service}
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className="lg:col-span-1">
-            <h4 className="text-white font-semibold mb-6 text-lg">Contact Us</h4>
-            <ul className="space-y-4">
+          <div>
+            <h2 className="mb-6 text-lg font-semibold text-white">Contact Us</h2>
+            <ul className="flex flex-col gap-4 text-sm text-white/70">
               <li>
-                <a 
-                  href="tel:+15852150461" 
-                  className="text-white/50 hover:text-[#d4af37] text-sm transition-colors flex items-start gap-3"
-                >
-                  <Phone size={18} className="text-[#d4af37] mt-0.5 flex-shrink-0" />
-                  <span>+1 (585) 215-0461</span>
+                <a href="tel:+15852150461" className="flex items-start gap-3 transition-colors hover:text-[#d4af37]">
+                  <Phone aria-hidden="true" size={18} className="mt-0.5 shrink-0 text-[#d4af37]" />+1 (585) 215-0461
                 </a>
               </li>
               <li>
-                <a 
-                  href="mailto:enquiries@clglobalmedia.com" 
-                  className="text-white/50 hover:text-[#d4af37] text-sm transition-colors flex items-start gap-3"
-                >
-                  <Mail size={18} className="text-[#d4af37] mt-0.5 flex-shrink-0" />
-                  <span>enquiries@clglobalmedia.com</span>
+                <a href="mailto:enquiries@clglobalmedia.com" className="flex items-start gap-3 break-all transition-colors hover:text-[#d4af37]">
+                  <Mail aria-hidden="true" size={18} className="mt-0.5 shrink-0 text-[#d4af37]" />enquiries@clglobalmedia.com
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-white/50 text-sm">
-                <MapPin size={18} className="text-[#d4af37] mt-0.5 flex-shrink-0" />
-                <span>99 Wall Street<br/>New York 10005<br/>USA</span>
+              <li className="flex items-start gap-3">
+                <MapPin aria-hidden="true" size={18} className="mt-0.5 shrink-0 text-[#d4af37]" />
+                <span><strong className="block text-white">Mailing address (correspondence only)</strong>CL GLOBAL MEDIA LLC<br />99 Wall Street<br />New York, NY 10005<br />USA</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin aria-hidden="true" size={18} className="mt-0.5 shrink-0 text-[#d4af37]" />
+                <span><strong className="block text-white">Operating address</strong>1875 Mission Street, Suites 103-106<br />San Francisco, CA 94103<br />USA</span>
               </li>
             </ul>
+            <p className="mt-4 text-xs leading-relaxed text-white/50">Our team works remotely and meets clients by appointment only.</p>
           </div>
         </div>
       </div>
 
-      {/* Legal Section */}
-      <div className="border-t border-white/5 bg-white/2.5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="mb-6">
-            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Legal Documents & Policies</h4>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+      <div className="border-t border-white/5 bg-white/[0.025]">
+        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">Legal Documents &amp; Policies</h2>
+          <nav aria-label="Legal documents">
+            <ul className="grid grid-cols-2 gap-4 md:grid-cols-4">
               {legalLinks.map((link) => (
-                <Link 
-                  key={link.href}
-                  href={link.href}
-                  className="text-white/60 hover:text-[#d4af37] text-xs transition-colors inline-flex items-center gap-2 group"
-                >
-                  <span className="w-1 h-1 rounded-full bg-[#d4af37]/30 group-hover:bg-[#d4af37] transition-colors" />
-                  {link.label}
-                </Link>
+                <li key={link.href}>
+                  <Link href={link.href} className="inline-flex items-center gap-2 text-xs text-white/60 transition-colors hover:text-[#d4af37]">
+                    <span aria-hidden="true" className="size-1 rounded-full bg-[#d4af37]/30" />{link.label}
+                  </Link>
+                </li>
               ))}
-            </div>
-          </div>
+            </ul>
+          </nav>
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="border-t border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <p className="text-white/30 text-sm text-center">
-              &copy; {new Date().getFullYear()} CL GLOBAL MEDIA LLC. All rights reserved.
-            </p>
+        <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+          <p className="text-center text-sm text-white/40">&copy; 2026 CL GLOBAL MEDIA LLC.</p>
         </div>
       </div>
     </footer>

@@ -4,30 +4,15 @@ import { AnimatedSection } from "@/components/ui/animated-section"
 
 export function IntroSection() {
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
-      {/* Background accent */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-[#d4af37]/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#d4af37]/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-        <AnimatedSection animation="fade-up">
-          <span className="inline-block px-4 py-1.5 bg-[#d4af37]/10 text-[#d4af37] text-sm font-medium rounded-full mb-6">
-            Our Services
-          </span>
-        </AnimatedSection>
-        
-        <AnimatedSection animation="fade-up" delay={100}>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight font-sans">
-            Planning Advertising Across{" "}
-            <span className="gradient-text">Multiple Media Formats</span>
-          </h2>
-        </AnimatedSection>
-        
+    <section className="relative overflow-hidden bg-black py-24">
+      <div aria-hidden="true" className="absolute left-0 top-0 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af37]/5 blur-3xl" />
+      <div aria-hidden="true" className="absolute bottom-0 right-0 size-96 translate-x-1/2 translate-y-1/2 rounded-full bg-[#d4af37]/5 blur-3xl" />
+      <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <AnimatedSection animation="fade-up"><span className="mb-6 inline-block rounded-full bg-[#d4af37]/10 px-4 py-1.5 text-sm font-medium text-[#d4af37]">Our Services</span></AnimatedSection>
+        <AnimatedSection animation="fade-up" delay={100}><h2 className="mb-8 text-3xl font-bold leading-tight text-white md:text-4xl lg:text-5xl">Planning outdoor media and <span className="gradient-text">corporate sponsorship</span></h2></AnimatedSection>
         <AnimatedSection animation="fade-up" delay={200}>
-          <p className="text-lg text-white/60 leading-relaxed max-w-3xl mx-auto">
-            CL GLOBAL MEDIA LLC provides planning and coordination capabilities across airport, roadside,
-            retail, transport, and digital advertising formats. We work with prospective clients to define
-            campaign requirements and identify formats suited to their audience and objectives.
+          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-white/60">
+            CL GLOBAL MEDIA LLC is a corporate sponsorship and outdoor media agency that plans and buys outdoor, transport, airport, retail, and digital out-of-home advertising on behalf of business clients through third-party media owners.
           </p>
         </AnimatedSection>
       </div>

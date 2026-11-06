@@ -7,7 +7,6 @@ import { ServicesSection } from "@/components/home/services-section"
 import { WhyChooseUsSection } from "@/components/home/why-choose-us-section"
 import { RoadsideSection } from "@/components/home/roadside-section"
 import { TransportSection } from "@/components/home/transport-section"
-import { HappyClientsSection } from "@/components/home/happy-clients-section"
 import { AboutPreviewSection } from "@/components/home/about-preview-section"
 import { CampaignsSection } from "@/components/home/campaigns-section"
 import { CTASection } from "@/components/home/cta-section"
@@ -23,7 +22,6 @@ export default function HomePage() {
       <WhyChooseUsSection />
       <RoadsideSection />
       <TransportSection />
-      <HappyClientsSection />
       <AboutPreviewSection />
       <CampaignsSection />
       <CTASection />

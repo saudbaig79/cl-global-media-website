@@ -3,25 +3,40 @@
 import Image from "next/image"
 import { AnimatedSection } from "@/components/ui/animated-section"
 
-const ceo = { name: "Tristan Marsh", role: "General Manager", bio: "Leads CL GLOBAL MEDIA LLC and is responsible for company direction, client engagement, and the coordination of its media and advertising services.", initials: "TM" }
-const leadershipTeam = [
-  { name: "Michael Matthews", role: "Head of Personnel", bio: "Responsible for personnel planning, team coordination, and supporting the company's working culture.", initials: "MM" },
-  { name: "Miles Parker", role: "Head of Sales", bio: "Responsible for sales activity, prospective client communication, and the commercial development of advertising opportunities.", initials: "MP" },
-  { name: "Robin Barker", role: "Head of Customer Service", bio: "Responsible for client communication and coordination throughout campaign planning and delivery.", initials: "RB" },
-  { name: "Saud Baig", role: "Head of Design", bio: "Responsible for design direction and the coordination of creative requirements across advertising formats.", initials: "SB" },
-]
+const tristanPortrait = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-11-06%20at%208.52.31%20PM-12IBfP8SwHIon9giwx5BUOv4ZxyKbg.jpeg"
 
 export function TeamMembers() {
   return (
     <section className="bg-background py-20 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <AnimatedSection className="mb-12 max-w-3xl"><p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary">Leadership accountability</p><h2 className="text-balance text-3xl font-semibold md:text-5xl">The people responsible for the company&apos;s direction and delivery.</h2></AnimatedSection>
-        <AnimatedSection animation="fade-up" className="mb-px bg-foreground p-8 text-background md:p-12">
-          <div className="flex flex-col gap-8 md:flex-row md:items-center"><div className="relative size-28 shrink-0"><Image src="/images/logo.png" alt="CL Global Media" fill className="object-contain" priority /></div><div><p className="text-sm uppercase tracking-[0.2em] text-background/60">{ceo.role}</p><h3 className="mt-2 text-3xl font-semibold">{ceo.name}</h3><p className="mt-4 max-w-2xl leading-relaxed text-background/70">{ceo.bio}</p></div></div>
+        <article className="grid overflow-hidden border border-border bg-card lg:grid-cols-[.82fr_1.18fr]">
+          <div className="relative min-h-[420px] bg-muted sm:min-h-[560px]">
+            <Image src={tristanPortrait} alt="Tristan A. Marsh, Chief Executive Officer of CL GLOBAL MEDIA LLC" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover object-center" unoptimized />
+          </div>
+          <div className="flex flex-col justify-center p-7 md:p-12 lg:p-16">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">Chief Executive Officer</p>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground md:text-4xl">CL GLOBAL MEDIA LLC Appoints Tristan A. Marsh as Chief Executive Officer</h2>
+            <div className="mt-8 flex flex-col gap-5 text-base leading-relaxed text-muted-foreground">
+              <p>CL Global Media LLC is proud to announce the appointment of Tristan A. Marsh as its new Chief Executive Officer.</p>
+              <p>Tristan joins CL Global Media LLC after establishing himself as one of the leading independent operators in the European media industry. Operating at the top of his field, he built a formidable reputation for delivering high-impact advertising campaigns for blue-chip clients across the UK, Europe, and the Middle East.</p>
+              <p>Known for his energy, drive, and hands-on leadership, Tristan brings with him not only his blue-chip client portfolio, but a substantial pipeline of work, deep industry relationships, and a culture of relentless execution.</p>
+              <p>&ldquo;I&apos;m not here to maintain - I&apos;m here to build,&rdquo; said Marsh. &ldquo;CL Global Media has the talent and the ambition. Now we have the momentum. This is a new chapter, and we&apos;re just getting started.&rdquo;</p>
+              <p>Under his leadership, CL GLOBAL MEDIA LLC will enter a new phase of growth - expanding its advertising client roster, scaling its creative and media buying capabilities, and cementing its position as a leading advertising company in the US market.</p>
+            </div>
+          </div>
+        </article>
+        <AnimatedSection animation="fade-up" delay={100}>
+          <div className="mx-auto mt-12 max-w-4xl border-l-2 border-primary pl-6 md:pl-10">
+            <h2 className="text-xl font-semibold text-foreground">A message from our CEO</h2>
+            <div className="mt-3 flex flex-col gap-4 text-lg leading-relaxed text-muted-foreground">
+              <p>I took over as CEO of CL GLOBAL MEDIA LLC after years operating independently at the top of the European media industry. I built my name from scratch - no backing, no shortcuts - just results for blue-chip advertising clients who demand the best.</p>
+              <p>Now I&apos;m bringing all of it to America: the clients, the contacts, the work ethic, and the energy.</p>
+              <p>My job is simple: take a great American advertising company and make it unstoppable.</p>
+              <p>Big plans. Big energy. Let&apos;s gooooooo!!!</p>
+            </div>
+            <p className="mt-4 text-sm font-medium text-foreground">- Tristan A. Marsh</p>
+          </div>
         </AnimatedSection>
-        <div className="grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
-          {leadershipTeam.map((member, index) => <AnimatedSection key={member.name} animation="fade-up" delay={index * 100} className="flex min-h-72 flex-col bg-card p-7"><div className="flex size-14 items-center justify-center rounded-full border border-primary text-sm font-semibold text-primary">{member.initials}</div><h3 className="mt-12 text-xl font-semibold">{member.name}</h3><p className="mt-1 text-sm text-primary">{member.role}</p><p className="mt-4 text-sm leading-relaxed text-muted-foreground">{member.bio}</p></AnimatedSection>)}
-        </div>
       </div>
     </section>
   )

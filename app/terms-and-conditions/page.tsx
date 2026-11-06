@@ -1,109 +1,53 @@
-'use client'
-
+import type { Metadata } from "next"
+import Link from "next/link"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { AnimatedSection } from "@/components/ui/animated-section"
 
-export default function TermsAndConditions() {
+export const metadata: Metadata = {
+  title: "Website Terms of Use | CL Global Media",
+  description: "Terms for using the CL GLOBAL MEDIA LLC website.",
+}
+
+const sections = [
+  { title: "1. About these terms", text: "The website at www.clglobalmedia.com (the \"Site\") is operated by CL GLOBAL MEDIA LLC, a New Mexico limited liability company, Entity No. 7521073 (\"we\", \"us\", or \"our\"). These Website Terms of Use (\"Terms\") apply when you access or use the Site. By using the Site, you agree to these Terms. If you do not agree, do not use the Site." },
+  { title: "2. Access to the Site", text: "We grant you a limited, non-exclusive, non-transferable and revocable right to use the Site in connection with evaluating or obtaining our services. You must not use the Site unlawfully, interfere with its operation or security, or reproduce or commercially exploit Site content except as permitted by law or by our written permission. We may modify, suspend or discontinue the Site." },
+  { title: "3. Intellectual property", text: "Content on the Site is owned by us or used by us under licence, except for material belonging to third parties. The CL GLOBAL MEDIA name and logo are used under licence. These Terms do not transfer ownership or grant you rights in any intellectual property beyond the limited right to access the Site described above." },
+  { title: "4. Third-party services and media inventory", text: "The Site may refer to third-party media owners, rights holders or providers. Their inventory, services and terms are controlled by those third parties and remain subject to availability. Links to third-party websites are provided for convenience; we do not control their content or policies." },
+  { title: "5. Business services", text: "Our services are supplied only under our Terms of Business." },
+  { title: "6. Site information", text: "The Site is provided for general information about our company and services. It is not legal, financial or professional advice, and information on the Site does not itself form a service contract. Any service engagement is subject to a written Proposal and our Terms of Business. Nothing in these Terms limits liability that cannot lawfully be limited." },
+  { title: "7. Governing law", text: "These Terms are governed by the law of the State of New Mexico. The courts of the State of New Mexico have exclusive jurisdiction, subject to any mandatory rights that apply to you by law." },
+]
+
+export default function TermsOfUsePage() {
   return (
-    <main className="min-h-screen bg-black pt-24 pb-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection animation="fade-in-up">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Website Terms of Use</h1>
-          <p className="text-zinc-400 mb-8 text-sm">Version 1.0</p>
-          
-          <div className="text-zinc-300 text-base leading-relaxed space-y-6">
-            <section>
-              <p className="text-justify">
-                The website located at www.clglobalmedia.com (the "Site") is a copyrighted work belonging to CL Global Media ("Company", "us", "our", and "we"). Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features. All such additional terms, guidelines, and rules are incorporated by reference into these Terms.
-              </p>
-            </section>
-
-            <section>
-              <p className="text-justify">
-                These Terms of Use (these "Terms") set forth the legally binding terms and conditions that govern your use of the Site. By accessing or using the Site, you are accepting these Terms (on behalf of yourself or the entity that you represent), and you represent and warrant that you have the right, authority, and capacity to enter into these Terms (on behalf of yourself or the entity that you represent). You may not access or use the Site or accept the Terms if you are not at least 18 years old. If you do not agree with all of the provisions of these Terms, do not access and/or use the Site.
-              </p>
-            </section>
-
-            <section className="bg-zinc-900/50 border-l-4 border-[#d4af37] p-6 my-8">
-              <p className="text-white font-semibold text-justify">
-                PLEASE BE AWARE THAT SECTION 8.2 CONTAINS PROVISIONS GOVERNING HOW TO RESOLVE DISPUTES BETWEEN YOU AND COMPANY. AMONG OTHER THINGS, SECTION 8.2 INCLUDES AN AGREEMENT TO ARBITRATE WHICH REQUIRES, WITH LIMITED EXCEPTIONS, THAT ALL DISPUTES BETWEEN YOU AND US SHALL BE RESOLVED BY BINDING AND FINAL ARBITRATION. SECTION 8.2 ALSO CONTAINS A CLASS ACTION AND JURY TRIAL WAIVER. PLEASE READ SECTION 8.2 CAREFULLY.
-              </p>
-              <p className="text-white font-semibold text-justify mt-4">
-                UNLESS YOU OPT OUT OF THE AGREEMENT TO ARBITRATE WITHIN 30 DAYS: (1) YOU WILL ONLY BE PERMITTED TO PURSUE DISPUTES OR CLAIMS AND SEEK RELIEF AGAINST US ON AN INDIVIDUAL BASIS, NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY CLASS OR REPRESENTATIVE ACTION OR PROCEEDING, AND YOU WAIVE YOUR RIGHT TO PARTICIPATE IN A CLASS ACTION LAWSUIT OR CLASS-WIDE ARBITRATION; AND (2) YOU ARE WAIVING YOUR RIGHT TO PURSUE DISPUTES OR CLAIMS AND SEEK RELIEF IN A COURT OF LAW AND TO HAVE A JURY TRIAL.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">Accounts</h2>
-              
-              <h3 className="text-lg font-semibold text-white mb-3">Account Creation</h3>
-              <p className="text-justify mb-6">
-                In order to use certain features of the Site, you must register for an account ("Account") and provide certain information about yourself as prompted by the account registration form. You represent and warrant that: (a) all required registration information you submit is truthful and accurate; (b) you will maintain the accuracy of such information. You may delete your Account at any time, for any reason, by following the instructions on the Site. Company may suspend or terminate your Account in accordance with Section 7.
-              </p>
-
-              <h3 className="text-lg font-semibold text-white mb-3">Account Responsibilities</h3>
-              <p className="text-justify">
-                You are responsible for maintaining the confidentiality of your Account login information and are fully responsible for all activities that occur under your Account. You agree to immediately notify Company of any unauthorized use, or suspected unauthorized use of your Account or any other breach of security. Company cannot and will not be liable for any loss or damage arising from your failure to comply with the above requirements.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">Access to the Site</h2>
-              
-              <h3 className="text-lg font-semibold text-white mb-3">License</h3>
-              <p className="text-justify mb-6">
-                Subject to these Terms, Company grants you a non-transferable, non-exclusive, revocable, limited license to use and access the Site solely for your own personal, non-commercial use.
-              </p>
-
-              <h3 className="text-lg font-semibold text-white mb-3">Certain Restrictions</h3>
-              <p className="text-justify mb-3">
-                The rights granted to you in these Terms are subject to the following restrictions:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-2 mb-6 text-justify">
-                <li>You shall not license, sell, rent, lease, transfer, assign, distribute, host, or otherwise commercially exploit the Site, whether in whole or in part, or any content displayed on the Site</li>
-                <li>You shall not modify, make derivative works of, disassemble, reverse compile or reverse engineer any part of the Site</li>
-                <li>You shall not access the Site in order to build a similar or competitive website, product, or service</li>
-                <li>Except as expressly stated herein, no part of the Site may be copied, reproduced, distributed, republished, downloaded, displayed, posted, or transmitted in any form or by any means. Unless otherwise indicated, any future release, update, or other addition to functionality of the Site shall be subject to these Terms. All copyright and other proprietary notices on the Site (or on any content displayed on the Site) must be retained on all copies thereof.</li>
-              </ul>
-
-              <h3 className="text-lg font-semibold text-white mb-3">Modification</h3>
-              <p className="text-justify mb-6">
-                Company reserves the right, at any time, to modify, suspend, or discontinue the Site (in whole or in part) with or without notice to you. You agree that Company will not be liable to you or to any third party for any modification, suspension, or discontinuation of the Site or any part thereof.
-              </p>
-
-              <h3 className="text-lg font-semibold text-white mb-3">No Support or Maintenance</h3>
-              <p className="text-justify mb-6">
-                You acknowledge and agree that Company will have no obligation to provide you with any support or maintenance in connection with the Site.
-              </p>
-
-              <h3 className="text-lg font-semibold text-white mb-3">Ownership</h3>
-              <p className="text-justify mb-6">
-                You acknowledge that all the intellectual property rights, including copyrights, patents, trademarks, and trade secrets, in the Site and its content are owned by Company or Company's suppliers. Neither these Terms (nor your access to the Site) transfers to you or any third party any rights, title or interest in or to such intellectual property rights, except for the limited access rights expressly set forth in Section 2.1. Company and its suppliers reserve all rights not granted in these Terms. There are no implied licenses granted under these Terms.
-              </p>
-
-              <h3 className="text-lg font-semibold text-white mb-3">Indemnification</h3>
-              <p className="text-justify">
-                You agree to indemnify and hold Company (and its officers, employees, and agents) harmless, including costs and attorneys&apos; fees, from any claim or demand made by any third party due to or arising out of (a) your use of the Site, (b) your violation of these Terms or (c) your violation of applicable laws or regulations. Company reserves the right, at your expense, to assume the exclusive defence and control of any matter for which you are required to indemnify us, and you agree to cooperate with our defence of these claims. You agree not to settle any matter without the prior written consent of Company. Company will use reasonable efforts to notify you of any such claim, action, or proceeding upon becoming aware of it.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">Contact Us</h2>
-              <p className="text-justify mb-4">
-                If you have any questions about these Terms of Use or our policies, please contact us:
-              </p>
-              <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 space-y-3">
-                <p className="font-semibold text-white">CL GLOBAL MEDIA LLC</p>
-                <p><span className="text-[#d4af37] font-semibold">Company No:</span> 7521073</p>
-                <div className="space-y-2 text-sm">
-                  <p><span className="text-[#d4af37] font-semibold">Address:</span> 99 Wall Street, New York 10005, USA</p>
-                  <p><span className="text-[#d4af37] font-semibold">Phone:</span> <a href="tel:+15852150461" className="hover:text-[#d4af37] transition-colors">+1 (585) 215-0461</a></p>
-                  <p><span className="text-[#d4af37] font-semibold">Email:</span> <a href="mailto:enquiries@clglobalmedia.com" className="hover:text-[#d4af37] transition-colors">enquiries@clglobalmedia.com</a></p>
-                </div>
-              </div>
-            </section>
-          </div>
-        </AnimatedSection>
-      </div>
+    <main className="min-h-screen bg-background">
+      <Header />
+      <section className="px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <AnimatedSection animation="fade-up">
+            <h1 className="text-4xl font-semibold text-foreground md:text-5xl">Website Terms of Use</h1>
+            <p className="mt-4 text-sm text-muted-foreground">Version 1.1, last updated [DATE]</p>
+            <div className="mt-10 flex flex-col gap-8 text-base leading-relaxed text-muted-foreground">
+              {sections.map((section) => (
+                <section key={section.title}>
+                  <h2 className="mb-3 text-2xl font-semibold text-primary">{section.title}</h2>
+                  <p>{section.title === "5. Business services" ? <>Our services are supplied only under our <Link className="text-foreground underline decoration-primary underline-offset-4" href="/terms-of-business">Terms of Business</Link>.</> : section.text}</p>
+                </section>
+              ))}
+              <section className="border border-border bg-card p-6">
+                <h2 className="mb-4 text-xl font-semibold text-foreground">Contact</h2>
+                <p>CL GLOBAL MEDIA LLC, a New Mexico limited liability company, Entity No. 7521073.</p>
+                <p className="mt-2">Mailing address (correspondence only): 99 Wall Street, New York, NY 10005, USA.</p>
+                <p className="mt-2">Operating address: 1875 Mission Street, Suites 103-106, San Francisco, CA 94103, USA.</p>
+                <p className="mt-2"><a className="text-foreground underline decoration-primary underline-offset-4" href="mailto:enquiries@clglobalmedia.com">enquiries@clglobalmedia.com</a></p>
+                <p className="mt-2">The CL GLOBAL MEDIA name and logo are used under licence.</p>
+              </section>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+      <Footer />
     </main>
   )
 }
