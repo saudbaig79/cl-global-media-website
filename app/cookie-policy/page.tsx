@@ -1,174 +1,44 @@
-'use client'
-
+import type { Metadata } from "next"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { AnimatedSection } from "@/components/ui/animated-section"
+
+export const metadata: Metadata = {
+  title: "Cookie Policy | CL Global Media",
+  description: "How CL GLOBAL MEDIA LLC uses cookies and similar technologies on its website.",
+}
 
 export default function CookiePolicy() {
   return (
-    <main className="min-h-screen bg-black pt-24 pb-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection animation="fade-in-up">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Cookie Policy</h1>
-          <p className="text-zinc-400 mb-8 text-sm">Last Updated: April 2026</p>
-          
-          <div className="text-zinc-300 text-base leading-relaxed space-y-6">
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">1. Introduction</h2>
-              <p className="text-justify">
-                CL Global Media LLC ("we," "us," "our," or "Company") uses cookies and similar tracking technologies on our website (the "Site") to enhance your browsing experience, understand how you interact with our content, and to deliver targeted advertising. This Cookie Policy explains what cookies are, how we use them, and your choices regarding their use.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">2. What Are Cookies?</h2>
-              <p className="text-justify mb-3">
-                Cookies are small text files that are placed on your device when you visit a website. They contain information about your browsing activity and are stored locally on your computer or mobile device. Cookies can be:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4 mb-6">
-                <li><strong>Session Cookies:</strong> Temporary files deleted when you close your browser</li>
-                <li><strong>Persistent Cookies:</strong> Remain on your device until manually deleted or until they expire</li>
-                <li><strong>First-Party Cookies:</strong> Set directly by the website you visit</li>
-                <li><strong>Third-Party Cookies:</strong> Set by external domains (e.g., analytics partners)</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">3. Types of Cookies We Use</h2>
-              
-              <h3 className="text-lg font-semibold text-white mt-4 mb-3">3.1 Essential Cookies</h3>
-              <p className="text-justify mb-3">
-                These cookies are necessary for the Site to function properly. They enable basic functions such as:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4 mb-6">
-                <li>Authentication and user account management</li>
-                <li>Security and fraud prevention</li>
-                <li>Session management and remembering your preferences</li>
-              </ul>
-
-              <h3 className="text-lg font-semibold text-white mt-4 mb-3">3.2 Performance and Analytics Cookies</h3>
-              <p className="text-justify mb-3">
-                We use analytics tools to understand how visitors interact with our Site. These cookies help us:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4 mb-6">
-                <li>Analyze traffic patterns and user behavior</li>
-                <li>Identify which pages are most popular</li>
-                <li>Understand visitor demographics and interests</li>
-                <li>Improve Site performance and user experience</li>
-              </ul>
-
-              <h3 className="text-lg font-semibold text-white mt-4 mb-3">3.3 Functional Cookies</h3>
-              <p className="text-justify mb-3">
-                These cookies remember your preferences and choices, such as:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4 mb-6">
-                <li>Language and regional preferences</li>
-                <li>Saved form data and login information</li>
-                <li>Display preferences (e.g., dark/light mode)</li>
-              </ul>
-
-              <h3 className="text-lg font-semibold text-white mt-4 mb-3">3.4 Marketing and Advertising Cookies</h3>
-              <p className="text-justify mb-3">
-                We use these cookies to deliver personalized advertisements and measure campaign effectiveness. They allow us to:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4 mb-6">
-                <li>Display targeted ads based on your interests</li>
-                <li>Track conversion rates and ad performance</li>
-                <li>Prevent showing you the same ad repeatedly</li>
-                <li>Partner with third-party advertising networks</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">4. Third-Party Cookies</h2>
-              <p className="text-justify mb-3">
-                Our Site may contain content from third-party services that set their own cookies, including:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4 mb-6">
-                <li>Google Analytics for website analytics</li>
-                <li>Facebook Pixel and other social media tracking</li>
-                <li>Advertising networks and ad exchange partners</li>
-                <li>Content delivery networks (CDNs)</li>
-              </ul>
-              <p className="text-justify">
-                We do not control these third-party cookies, and their use is governed by their respective privacy policies. We recommend reviewing their policies to understand how they collect and use your data.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">5. Your Cookie Choices</h2>
-              
-              <h3 className="text-lg font-semibold text-white mt-4 mb-3">5.1 Browser Controls</h3>
-              <p className="text-justify mb-3">
-                Most web browsers allow you to manage cookies through settings. You can:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4 mb-6">
-                <li>Accept or reject all cookies</li>
-                <li>Delete existing cookies</li>
-                <li>Block cookies from specific domains</li>
-                <li>Enable "Do Not Track" signals</li>
-              </ul>
-
-              <h3 className="text-lg font-semibold text-white mt-4 mb-3">5.2 Cookie Banner and Consent</h3>
-              <p className="text-justify mb-6">
-                When you first visit our Site, we display a cookie consent banner. You can accept all cookies, reject non-essential cookies, or customize your preferences. Your choice is stored and respected for future visits.
-              </p>
-
-              <h3 className="text-lg font-semibold text-white mt-4 mb-3">5.3 Opting Out of Advertising</h3>
-              <p className="text-justify mb-6">
-                You can opt out of targeted advertising through industry initiatives such as the Network Advertising Initiative (NAI) or Digital Advertising Alliance (DAA). Visit their websites for more information.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">6. Data Retention</h2>
-              <p className="text-justify mb-3">
-                Cookies are retained for different periods depending on their type:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4 mb-6">
-                <li>Session cookies are deleted when you close your browser</li>
-                <li>Persistent cookies expire according to their set duration (typically 1-2 years)</li>
-                <li>Analytics data is typically retained for 13-26 months</li>
-                <li>Marketing cookies may be retained for up to 24 months</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">7. GDPR and Privacy Regulations</h2>
-              <p className="text-justify mb-3">
-                For users in the European Union and other jurisdictions with privacy regulations:
-              </p>
-              <ul className="list-disc list-inside space-y-2 ml-4 mb-6">
-                <li>We obtain your explicit consent before placing non-essential cookies</li>
-                <li>You have the right to withdraw consent at any time</li>
-                <li>We provide transparent information about cookie usage</li>
-                <li>We comply with applicable data protection laws</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">8. Changes to This Policy</h2>
-              <p className="text-justify">
-                We may update this Cookie Policy periodically to reflect changes in our practices or applicable laws. We will notify you of significant changes by updating the "Last Updated" date and posting the revised policy on our Site. Continued use of the Site constitutes your acceptance of any updated Cookie Policy.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">9. Contact Us</h2>
-              <p className="text-justify mb-4">
-                If you have questions about our cookie practices or this Cookie Policy, please contact us:
-              </p>
-              <div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 space-y-3">
-                <p className="font-semibold text-white">CL GLOBAL MEDIA LLC</p>
-                <p><span className="text-[#d4af37] font-semibold">Company No:</span> 7521073</p>
-                <div className="space-y-2 text-sm">
-                  <p><span className="text-[#d4af37] font-semibold">Address:</span> 99 Wall Street, New York 10005, USA</p>
-                  <p><span className="text-[#d4af37] font-semibold">Phone:</span> <a href="tel:+15852150461" className="hover:text-[#d4af37] transition-colors">+1 (585) 215-0461</a></p>
-                  <p><span className="text-[#d4af37] font-semibold">Email:</span> <a href="mailto:enquiries@clglobalmedia.com" className="hover:text-[#d4af37] transition-colors">enquiries@clglobalmedia.com</a></p>
-                </div>
-              </div>
-            </section>
-          </div>
-        </AnimatedSection>
-      </div>
+    <main className="min-h-screen bg-background">
+      <Header />
+      <section className="px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <AnimatedSection animation="fade-up">
+            <h1 className="text-4xl font-semibold text-foreground md:text-5xl">Cookie Policy</h1>
+            <p className="mt-4 text-sm text-muted-foreground">Last updated: [DATE OF PUBLICATION]</p>
+            <div className="mt-10 flex flex-col gap-8 text-base leading-relaxed text-muted-foreground">
+              <section>
+                <h2 className="mb-3 text-2xl font-semibold text-primary">Cookies and similar technologies</h2>
+                <p>Cookies are small files stored by a website in your browser. CL GLOBAL MEDIA LLC does not currently use advertising cookies, social-media retargeting pixels, or an on-site account or preference system. This website uses Vercel Web Analytics to measure site traffic.</p>
+              </section>
+              <section>
+                <h2 className="mb-3 text-2xl font-semibold text-primary">Analytics</h2>
+                <p>Vercel describes Web Analytics as using a short-lived hash derived from incoming requests rather than relying on third-party cookies; its documentation says that hash is discarded after 24 hours. Analytics data is used to understand site usage, not to deliver targeted advertising. Vercel&apos;s processing is subject to its own privacy information and current service configuration.</p>
+              </section>
+              <section>
+                <h2 className="mb-3 text-2xl font-semibold text-primary">Your choices</h2>
+                <p>You can manage or delete cookies using your browser settings. Blocking cookies may affect functionality provided by the browser or hosting services. The website does not currently provide an on-site cookie preference control. If our use of cookies or similar technologies changes, we will update this policy and provide any consent choices required by applicable law before using non-essential technologies that require consent.</p>
+              </section>
+              <section>
+                <h2 className="mb-3 text-2xl font-semibold text-primary">Contact</h2>
+                <p>For questions about this policy or personal data, contact CL GLOBAL MEDIA LLC at <a className="text-foreground underline decoration-primary underline-offset-4" href="mailto:enquiries@clglobalmedia.com">enquiries@clglobalmedia.com</a>. See our <a className="text-foreground underline decoration-primary underline-offset-4" href="/privacy-policy">Privacy Policy</a> for more information.</p>
+              </section>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+      <Footer />
     </main>
   )
 }

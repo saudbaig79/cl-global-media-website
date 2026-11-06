@@ -9,8 +9,8 @@ import { AnimatedSection } from "@/components/ui/animated-section"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" })
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setFormData(current => ({ ...current, [event.target.name]: event.target.value }))
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setFormData((current) => ({ ...current, [event.target.name]: event.target.value }))
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const subject = encodeURIComponent(`Website enquiry from ${formData.name}`)
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone || "Not provided"}\n\n${formData.message}`)
@@ -20,24 +20,15 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-background">
       <Header />
-      
-      {/* Hero Section with Image */}
-      <section className="relative min-h-[45vh] flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative flex min-h-[45vh] items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0">
-          <Image
-            src="/images/contact-hero.png"
-            alt="Business meeting and campaign discussion"
-            fill
-            className="object-cover"
-            priority
-          />
+          <Image src="/images/contact-hero.png" alt="Business meeting and campaign discussion" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
         </div>
-
         <div className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 md:py-20 lg:px-8">
           <p className="mb-5 text-sm font-medium uppercase tracking-[0.22em] text-primary">Direct contact</p>
           <h1 className="max-w-4xl text-balance text-4xl font-semibold leading-tight md:text-6xl lg:text-7xl">Start a clear conversation about your campaign.</h1>
-          <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground mx-auto">Contact CL GLOBAL MEDIA LLC using the published details below, or prepare an email using the enquiry form.</p>
+          <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">Contact CL GLOBAL MEDIA LLC using the published details below, or prepare an email using the enquiry form.</p>
         </div>
       </section>
 
@@ -46,12 +37,14 @@ export default function ContactPage() {
           <AnimatedSection animation="fade-left">
             <p className="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-primary">Company details</p>
             <h2 className="text-3xl font-semibold">CL GLOBAL MEDIA LLC</h2>
+            <p className="mt-4 max-w-lg leading-relaxed text-muted-foreground">A limited liability company organised under the laws of the State of New Mexico, USA. Entity No. 7521073.</p>
             <div className="mt-10 flex flex-col gap-7">
               <a href="tel:+15852150461" className="flex items-start gap-4 text-muted-foreground transition-colors hover:text-foreground"><Phone className="mt-1 shrink-0 text-primary" aria-hidden="true" /><span><strong className="block text-foreground">Phone</strong>+1 (585) 215-0461</span></a>
               <a href="mailto:enquiries@clglobalmedia.com" className="flex items-start gap-4 break-all text-muted-foreground transition-colors hover:text-foreground"><Mail className="mt-1 shrink-0 text-primary" aria-hidden="true" /><span><strong className="block text-foreground">Email</strong>enquiries@clglobalmedia.com</span></a>
-              <div className="flex items-start gap-4 text-muted-foreground"><MapPin className="mt-1 shrink-0 text-primary" aria-hidden="true" /><span><strong className="block text-foreground">Address</strong>99 Wall Street<br />New York 10005<br />USA</span></div>
+              <div className="flex items-start gap-4 text-muted-foreground"><MapPin className="mt-1 shrink-0 text-primary" aria-hidden="true" /><span><strong className="block text-foreground">Mailing address (correspondence only)</strong>CL GLOBAL MEDIA LLC<br />99 Wall Street<br />New York, NY 10005<br />USA</span></div>
+              <div className="flex items-start gap-4 text-muted-foreground"><MapPin className="mt-1 shrink-0 text-primary" aria-hidden="true" /><span><strong className="block text-foreground">Operating address</strong>1875 Mission Street, Suites 103-106<br />San Francisco, CA 94103<br />USA</span></div>
             </div>
-            <div className="mt-12 border-l-2 border-primary pl-5"><h3 className="font-semibold">Corporate enquiries</h3><p className="mt-2 leading-relaxed text-muted-foreground">Authorized counterparties may request corporate and KYB information directly as part of a formal, private due-diligence process.</p></div>
+            <p className="mt-8 border-l-2 border-primary pl-5 leading-relaxed text-muted-foreground">Our team works remotely and meets clients by appointment only.</p>
           </AnimatedSection>
 
           <AnimatedSection animation="fade-right">
@@ -68,43 +61,6 @@ export default function ContactPage() {
           </AnimatedSection>
         </div>
       </section>
-
-      {/* Location Verification Section */}
-      <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-primary">Located at</p>
-            <h2 className="text-3xl font-semibold">99 Wall Street, New York</h2>
-          </div>
-
-          {/* Street View Image */}
-          <div className="grid gap-8 lg:grid-cols-2">
-            <div className="relative aspect-video rounded-lg overflow-hidden border border-border">
-              <Image
-                src="/images/wall-street-view.png"
-                alt="Street view of 99 Wall Street in New York's Financial District"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Google Map */}
-            <div className="relative aspect-video rounded-lg overflow-hidden border border-border">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1234567890!2d-74.0067!3d40.7074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316bb7e4e1%3A0x6c296c66261b50d!2s99%20Wall%20St%2C%20New%20York%2C%20NY%2010005!5e0!3m2!1sen!2sus!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="CL Global Media Office Location Map"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Footer />
     </main>
   )

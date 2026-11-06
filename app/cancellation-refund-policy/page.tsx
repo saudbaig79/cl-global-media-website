@@ -1,97 +1,44 @@
-'use client'
-
+import type { Metadata } from "next"
+import Link from "next/link"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { AnimatedSection } from "@/components/ui/animated-section"
+
+export const metadata: Metadata = {
+  title: "Cancellation Policy | CL Global Media",
+  description: "Cancellation terms for business campaigns arranged by CL GLOBAL MEDIA LLC.",
+}
 
 export default function CancellationRefundPolicy() {
   return (
-    <main className="min-h-screen bg-black pt-24 pb-20">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection animation="fade-in-up">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">Cancellation & Refund Policy</h1>
-          <div className="text-zinc-300 text-lg leading-relaxed space-y-6">
-            <section>
-              <p className="text-justify">
-                At CL Global Media, we are dedicated to delivering high-quality outdoor media and advertising solutions. We understand that circumstances may require cancellations or refunds, and we aim to handle such requests fairly and transparently. Please read our policy carefully before making a purchase.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">1. Cancellation Policy</h2>
-              
-              <h3 className="text-xl font-semibold text-white mt-4 mb-3">1.1 Campaign & Media Placement Cancellations</h3>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Clients may request a cancellation within 48 hours of booking a service or placing an order</li>
-                <li>Cancellations after 48 hours may be subject to fees, depending on the stage of campaign execution</li>
-                <li>Once a campaign has been scheduled, produced, or published, it cannot be canceled and will be billed in full</li>
-              </ul>
-
-              <h3 className="text-xl font-semibold text-white mt-4 mb-3">1.3 Event & Production Services</h3>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Event-related services require at least 7 days' notice for cancellations</li>
-                <li>Deposits for event bookings and large-scale productions are non-refundable once work has commenced</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">2. Refund Policy</h2>
-              
-              <h3 className="text-xl font-semibold text-white mt-4 mb-3">2.1 General Refund Eligibility</h3>
-              <p className="text-justify mb-3">Refunds will be issued only under the following conditions:</p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>The cancellation request was made within the allowed timeframe</li>
-                <li>CL Global Media failed to deliver the agreed-upon services</li>
-                <li>A technical error or system failure caused an issue with the order</li>
-              </ul>
-
-              <h3 className="text-xl font-semibold text-white mt-4 mb-3">2.2 Non-Refundable Items & Services</h3>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Custom advertising campaigns and media placements</li>
-                <li>Digital marketing services that have already commenced</li>
-                <li>Third-party advertising costs (e.g., billboard space, print media)</li>
-                <li>Consultation fees and strategy planning sessions</li>
-              </ul>
-
-              <h3 className="text-xl font-semibold text-white mt-4 mb-3">2.3 Refund Processing</h3>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Approved refunds will be processed within 7-10 business days</li>
-                <li>Refunds will be credited to the original payment method used for purchase</li>
-                <li>Clients are responsible for any transaction fees incurred during the refund process</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">3. Exceptions & Special Cases</h2>
-              <p className="text-justify mb-3">Refunds or credits may be considered on a case-by-case basis for:</p>
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>Campaigns significantly disrupted due to issues caused by CL Global Media</li>
-                <li>Errors in media placements or incorrect advertisements (with valid proof)</li>
-                <li>Force Majeure events (e.g., natural disasters, unforeseen government restrictions)</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">4. Contact for Cancellations & Refunds</h2>
-              <p className="text-justify mb-4">To request a cancellation or refund, please contact our support team:</p>
-<div className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 space-y-3">
-              <p className="font-semibold text-white">CL GLOBAL MEDIA LLC</p>
-              <p><span className="text-[#d4af37] font-semibold">Company No:</span> 7521073</p>
-              <div className="space-y-2 text-sm">
-                  <p><span className="text-[#d4af37] font-semibold">Phone:</span> <a href="tel:+15852150461" className="hover:text-[#d4af37] transition-colors">+1 (585) 215-0461</a></p>
-                  <p><span className="text-[#d4af37] font-semibold">Email:</span> <a href="mailto:enquiries@clglobalmedia.com" className="hover:text-[#d4af37] transition-colors">enquiries@clglobalmedia.com</a></p>
-                  <p className="text-white/60">Please include your order number, campaign details, and a brief explanation of your request.</p>
-                </div>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-[#d4af37] mb-4">5. Legal Disclaimer</h2>
-              <p className="text-justify">
-                CL Global Media reserves the right to modify this policy at any time without prior notice. By engaging with our services, clients agree to abide by this policy and understand that certain services are non-refundable.
-              </p>
-            </section>
-          </div>
-        </AnimatedSection>
-      </div>
+    <main className="min-h-screen bg-background">
+      <Header />
+      <section className="px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <AnimatedSection animation="fade-up">
+            <h1 className="text-4xl font-semibold text-foreground md:text-5xl">Cancellation and Refund Policy</h1>
+            <div className="mt-10 flex flex-col gap-8 text-base leading-relaxed text-muted-foreground">
+              <section>
+                <h2 className="mb-3 text-2xl font-semibold text-primary">Business campaign bookings</h2>
+                <p>CL GLOBAL MEDIA LLC supplies services to business clients only. Campaign bookings are arranged with third-party media owners and are subject to the availability and cancellation terms of the relevant Media Owner.</p>
+              </section>
+              <section>
+                <h2 className="mb-3 text-2xl font-semibold text-primary">Cancellation after acceptance</h2>
+                <p>Cancellation after a Proposal has been accepted is subject to the Media Owner&apos;s cancellation terms. The client is responsible for any cancellation charges imposed by the Media Owner and for our Fees for work already completed, as set out in the accepted Proposal and our <Link className="text-foreground underline decoration-primary underline-offset-4" href="/terms-of-business">Terms of Business</Link>.</p>
+              </section>
+              <section>
+                <h2 className="mb-3 text-2xl font-semibold text-primary">Changes and refunds</h2>
+                <p>Requested changes must be agreed in writing and may change the Fees, Media Costs, or booking availability. Any refund or credit depends on amounts recovered from the Media Owner and the terms of the relevant Proposal. No fixed cancellation window or guaranteed refund applies unless it is expressly stated in the Proposal or required by law.</p>
+              </section>
+              <section>
+                <h2 className="mb-3 text-2xl font-semibold text-primary">Contact</h2>
+                <p>For a booking enquiry, contact <a className="text-foreground underline decoration-primary underline-offset-4" href="mailto:enquiries@clglobalmedia.com">enquiries@clglobalmedia.com</a> and include the relevant Proposal or Campaign reference.</p>
+              </section>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+      <Footer />
     </main>
   )
 }

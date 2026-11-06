@@ -17,10 +17,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'CL Global Media | Outdoor Advertising Services',
+    default: 'CL Global Media | Outdoor Media & Corporate Sponsorship',
     template: '%s | CL Global Media',
   },
-  description: 'CL GLOBAL MEDIA LLC provides planning and coordination capabilities across outdoor and place-based advertising formats.',
+  description: 'CL GLOBAL MEDIA LLC is a corporate sponsorship and outdoor media agency that plans and buys outdoor, transport, airport, retail and digital out-of-home advertising on behalf of business clients through third-party media owners.'
 }
 
 export default function RootLayout({

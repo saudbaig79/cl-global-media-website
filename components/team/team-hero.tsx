@@ -1,33 +1,10 @@
-"use client"
-
-import Image from "next/image"
-
 export function TeamHero() {
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <Image
-          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop"
-          alt="Team collaboration"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black" />
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 pb-20">
-        <span className="inline-block px-4 py-1.5 bg-[#d4af37]/10 text-[#d4af37] text-sm font-medium rounded-full mb-6 animate-fade-in-up">
-          Our People
-        </span>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-fade-in-up delay-100 font-sans">
-          Meet the <span className="gradient-text">Team</span>
-        </h1>
-        <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-          The published leadership of CL GLOBAL MEDIA LLC and the areas of responsibility they oversee.
-        </p>
+    <section className="relative flex min-h-[34vh] items-end justify-center overflow-hidden bg-black px-4 pb-12 pt-32 md:min-h-[40vh] md:pb-16">
+      <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#d4af37]/15 via-black to-black" />
+      <div className="relative z-10 mx-auto w-full max-w-7xl text-center">
+        <h1 className="text-balance font-sans text-4xl font-bold leading-tight text-white md:text-6xl">Meet our New Leadership</h1>
+        <p className="mt-5 text-lg font-medium text-white/80 md:text-xl">Tristan A. Marsh &ndash; CEO</p>
       </div>
     </section>
   )
